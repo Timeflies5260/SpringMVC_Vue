@@ -17,17 +17,31 @@
       <url>https://repo.spring.io/milestone</url>
     </repository>
   </repositories>
+  <!-- 集中定义依赖版本号 -->
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <junit.version>4.13.2</junit.version>
+    <spring.version>6.0.0-M2</spring.version>
+    <mybatis.version>3.5.10</mybatis.version>
+    <mybatis.spring.version>2.0.7</mybatis.spring.version>
+    <mysql.version>8.0.32</mysql.version>
+    <druid.version>1.2.13</druid.version>
+    <jstl.version>2.0.0</jstl.version>
+    <servlet-api.version>6.0.0</servlet-api.version>
+    <jackson.databind.version>2.9.6</jackson.databind.version>
+  </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>6.0.0-M2</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
-      <version>6.0.0-M2</version>
+      <version>${spring.version}</version>
     </dependency>
     <!--添加springmvc-->
     <dependency>
@@ -38,53 +52,53 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
-      <version>6.0.0-M2</version>
+      <version>${spring.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.32</version>
+      <version>${mysql.version}</version>
     </dependency>
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
-      <version>3.5.10</version>
+      <version>${mybatis.version}</version>
     </dependency>
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
-      <version>2.0.7</version>
+      <version>${mybatis.spring.version}</version>
     </dependency>
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
-      <version>1.2.13</version>
+      <version>${druid.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.2</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
     <!--添加servlet-->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
+      <version>${servlet-api.version}</version>
       <scope>provided</scope>
     </dependency>
     <!--添加jstl依赖-->
     <dependency>
       <groupId>org.glassfish.web</groupId>
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-      <version>2.0.0</version>
+      <version>${jstl.version}</version>
     </dependency>
     <!--springMVC默认处理JSON的库 -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.9.6</version>
+      <version>${jackson.databind.version}</version>
     </dependency>
 
   </dependencies>
@@ -110,9 +124,5 @@
     </resources>
   </build>
 
-  <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-  </properties>
 
 </project>
